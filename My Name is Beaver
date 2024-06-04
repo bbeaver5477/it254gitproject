@@ -1,0 +1,7 @@
+
+az group create --location eastus --resource-group MyResourceGroup
+
+az vm create --resource-group MyResourceGroup --name vm1 --image Ubuntu2204 --size Standard_B1s --admin-username azureuser --generate-ssh-keys
+
+az vm open-port --port 80 --resource-group MyResourceGroup --name vm1 --priority 1001
+az vm open-port --port 144 --resource-group MyResourceGroup --name vm1 --priority 1002
